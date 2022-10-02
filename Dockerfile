@@ -1,19 +1,21 @@
-FROM node:12.16.3-alpine3.9
+FROM node:15.11.0-alpine3.12
 
-RUN mkdir -p /var/www/plataforma-verde
-WORKDIR /var/www/plataforma-verde
+# create destination directory
+RUN mkdir -p /usr/src/plataforma-verde
+WORKDIR /usr/src/plataforma-verde
 
-COPY package*.json ./
+# update and install dependency
+RUN apk update && apk upgrade
+RUN apk add git
+
+# copy the app, note .dockerignore
+COPY . /usr/src/plataforma-verde/
 RUN npm install
-
-COPY . .
-
 RUN npm run build
 
 EXPOSE 3000
 
 ENV NUXT_HOST=0.0.0.0
-
 ENV NUXT_PORT=3000
 
 CMD [ "npm", "start" ]

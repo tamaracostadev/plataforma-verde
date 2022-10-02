@@ -1,5 +1,5 @@
 <template>
-  <div class="p-2.5 w-full">
+  <div class="mt-5 w-full">
           <table class="table-auto border-collapse w-full bg-white">
             <thead class="text-pvsm bg-tblhead">
               <tr class="h-10 text-left">
@@ -21,7 +21,7 @@
                 <td class="p-2 border border-divider">{{user.idade}}</td>
                 <td class="p-2 border border-divider">{{user.estado}}</td>
                 <td class="p-2 border border-divider">{{user.cidade}}</td>
-                <td class="border border-divider"><img src="~/static/icon-pencil.svg" class="mx-auto cursor-pointer" @click="$emit('modal');$emit('edit-user',i)"></td>
+                <td class="border border-divider"><img src="~/static/icon-pencil.svg" class="mx-auto cursor-pointer" @click="editUser(i)"></td>
                 <td class="border border-divider"><img src="~/static/icon-trash.svg" class="mx-auto cursor-pointer" @click="deletaUser(i)"></td>
               </tr>
             </tbody>
@@ -31,6 +31,7 @@
 
 <script>
 export default {
+    name: 'Table',
     props: ['usersList'],
 
     computed:{
@@ -38,12 +39,12 @@ export default {
     },
     methods:{
         deletaUser(id){
-      this.users.splice(id, 1)
-    },
+            this.users.splice(id, 1)
+        },
+        editUser(id){
+            this.$root.$emit('edit',id)
+        }
+
     }
 }
 </script>
-
-<style>
-
-</style>

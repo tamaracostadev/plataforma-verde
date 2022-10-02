@@ -21,6 +21,7 @@ module.exports = {
       },
       boxShadow: {
         box: '0px 2px 2px rgba(0, 0, 0, 0.4)',
+        tooltip: '1px 1px 2px rgba(0, 0, 0, 0.26)',
       },
       fontSize: {
         pvsm: '13px'
