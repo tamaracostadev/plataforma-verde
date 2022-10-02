@@ -15,7 +15,9 @@ module.exports = {
         form: '#F5F5F5',
         tblhead: '#E0E0E0',
         title: '#515151',
-        divider: '#CCCCCC'
+        divider: '#CCCCCC',
+        btn: '#5CAC21',
+        btnh: '#65BF24',
       },
       boxShadow: {
         box: '0px 2px 2px rgba(0, 0, 0, 0.4)',
