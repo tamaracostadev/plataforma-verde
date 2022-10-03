@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-5 w-full">
-          <table class="table-auto border-collapse w-full bg-white">
+  <div class="mt-5 w-full  overflow-x-auto">
+          <table class="table-auto border-collapse w-full bg-white min-w-[768px]">
             <thead class="text-pvsm bg-tblhead">
               <tr class="h-10 text-left">
                 <th class="p-2 border border-divider">NOME COMPLETO</th>

@@ -16,7 +16,7 @@
           required
         />
       </div>
-      <div class="col-start-8 col-end-11">
+      <div class="col-start-8 lg:col-end-11  col-end-13">
         <label for="cpf">CPF*</label>
         <input
           v-model="form.cpf"
@@ -29,7 +29,7 @@
         />
         <p v-if="errors.cpf" class="text-red-600">{{ errors.cpf }}</p>
       </div>
-      <div class="col-start-11 col-end-13">
+      <div class="lg:col-start-11 lg:col-end-13 col-start-1 col-end-7">
         <label for="dtNasc">Data de Nascimento*</label>
         <input
           v-model="form.dtNasc"
@@ -40,7 +40,7 @@
         />
       </div>
       <!-- Linha2 -->
-      <div class="col-start-1 col-end-6">
+      <div class="lg:col-start-1 lg:col-end-6 col-start-7 col-end-13">
         <label for="estado">Estado*</label>
         <select
           v-model="form.estado"
@@ -59,7 +59,7 @@
           </option>
         </select>
       </div>
-      <div class="col-start-6 col-end-11">
+      <div class="lg:col-start-6 lg:col-end-11 col-start-1 col-end-7">
         <label for="cidade">Cidade*</label>
         <select
           v-model="form.cidade"
@@ -77,7 +77,7 @@
           </option>
         </select>
       </div>
-      <div class="col-start-11 col-end-13 self-end">
+      <div class="lg:col-start-11 lg:col-end-13 col-start-7 col-end-13  self-end">
         <button
           type="submit"
           class="w-full p-1 rounded border-2 border-btn bg-btn text-white hover:bg-btnh"
